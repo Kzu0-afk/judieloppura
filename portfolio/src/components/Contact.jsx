@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import AnimatedSection from './AnimatedSection';
 
 const Contact = () => {
   const [copiedEmail, setCopiedEmail] = useState(false);
@@ -41,7 +42,7 @@ const Contact = () => {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900/5 via-transparent to-transparent"></div>
 
       <div className="max-w-4xl mx-auto relative z-10">
-        <div className="text-center mb-16">
+        <AnimatedSection animation="fade-in-down" className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Get In <span className="text-gradient">Touch</span>
           </h2>
@@ -49,11 +50,12 @@ const Contact = () => {
           <p className="text-zinc-400 text-lg max-w-2xl mx-auto">
             I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
           </p>
-        </div>
+        </AnimatedSection>
 
         <div className="space-y-8">
           {/* Email Card */}
-          <div className="p-8 bg-gradient-to-br from-zinc-900 to-zinc-800 border border-zinc-700 rounded-2xl hover:border-primary-500/50 transition-all duration-300 animate-slide-up">
+          <AnimatedSection animation="scale-in" delay={100}>
+            <div className="p-8 bg-gradient-to-br from-zinc-900 to-zinc-800 border border-zinc-700 rounded-2xl hover:border-primary-500/50 transition-all duration-300 glow-hover-area hover:glow-strong">
             <div className="flex items-start gap-6">
               <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-primary-500/10 border border-primary-500/20 flex items-center justify-center">
                 <svg className="w-7 h-7 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -95,19 +97,23 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-          </div>
+            </div>
+          </AnimatedSection>
 
           {/* Social Links */}
           <div className="grid md:grid-cols-2 gap-6">
             {socialLinks.map((link, index) => (
-              <a
+              <AnimatedSection
                 key={link.name}
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group p-6 bg-zinc-900 border border-zinc-700 rounded-xl hover:border-primary-500/50 transition-all duration-300 hover:scale-105 animate-slide-up"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                animation="fade-in-up"
+                delay={200 + (index * 100)}
               >
+                <a
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block group p-6 bg-zinc-900 border border-zinc-700 rounded-xl hover:border-primary-500/50 transition-all duration-300 hover:scale-105 glow-hover-area hover:glow"
+                >
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-lg bg-zinc-800 border border-zinc-700 flex items-center justify-center group-hover:bg-primary-500/10 group-hover:border-primary-500/20 transition-colors">
                     <span className={`text-zinc-400 ${link.color} transition-colors`}>
@@ -130,15 +136,18 @@ const Contact = () => {
                   </svg>
                 </div>
               </a>
+              </AnimatedSection>
             ))}
           </div>
 
           {/* Additional Info */}
-          <div className="p-6 bg-zinc-900/50 border border-zinc-800 rounded-xl text-center">
+          <AnimatedSection animation="fade-in-up" delay={500}>
+            <div className="p-6 bg-zinc-900/50 border border-zinc-800 rounded-xl text-center glow-hover-area hover:border-primary-500/30 transition-all duration-300">
             <p className="text-zinc-400">
               Looking for a motivated full-stack developer? Let's build something amazing together! 🚀
             </p>
-          </div>
+            </div>
+          </AnimatedSection>
         </div>
       </div>
     </section>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import AnimatedSection from './AnimatedSection';
 
 const Contributions = () => {
   const [expandedContribution, setExpandedContribution] = useState(null);
@@ -89,7 +90,7 @@ const Contributions = () => {
   return (
     <section id="contributions" className="py-24 px-6 lg:px-8 bg-zinc-950">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <AnimatedSection animation="fade-in-down" className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Professional <span className="text-gradient">Contributions</span>
           </h2>
@@ -97,15 +98,16 @@ const Contributions = () => {
           <p className="text-zinc-400 text-lg max-w-2xl mx-auto">
             Full-stack features I've built for StudyBoost Platform
           </p>
-        </div>
+        </AnimatedSection>
 
         <div className="space-y-6">
           {contributions.map((contribution, index) => (
-            <div
+            <AnimatedSection
               key={contribution.id}
-              className="animate-slide-up bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden hover:border-primary-500/50 transition-all duration-300"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              animation="fade-in-up"
+              delay={index * 100}
             >
+              <div className="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden hover:border-primary-500/50 transition-all duration-300 glow-hover-area hover:glow">
               <div
                 className="p-6 cursor-pointer"
                 onClick={() => setExpandedContribution(expandedContribution === contribution.id ? null : contribution.id)}
@@ -185,28 +187,37 @@ const Contributions = () => {
                   </div>
                 </div>
               )}
-            </div>
+              </div>
+            </AnimatedSection>
           ))}
         </div>
 
         {/* Summary Stats */}
         <div className="mt-16 grid md:grid-cols-4 gap-6">
-          <div className="p-6 bg-gradient-to-br from-zinc-900 to-zinc-800 border border-zinc-700 rounded-xl text-center">
-            <div className="text-3xl font-bold text-gradient mb-2">6,833+</div>
-            <div className="text-sm text-zinc-400">Net Lines of Code</div>
-          </div>
-          <div className="p-6 bg-gradient-to-br from-zinc-900 to-zinc-800 border border-zinc-700 rounded-xl text-center">
-            <div className="text-3xl font-bold text-gradient mb-2">105+</div>
-            <div className="text-sm text-zinc-400">Files Changed</div>
-          </div>
-          <div className="p-6 bg-gradient-to-br from-zinc-900 to-zinc-800 border border-zinc-700 rounded-xl text-center">
-            <div className="text-3xl font-bold text-gradient mb-2">7+</div>
-            <div className="text-sm text-zinc-400">Major Features</div>
-          </div>
-          <div className="p-6 bg-gradient-to-br from-zinc-900 to-zinc-800 border border-zinc-700 rounded-xl text-center">
-            <div className="text-3xl font-bold text-gradient mb-2">8+</div>
-            <div className="text-sm text-zinc-400">Security Features</div>
-          </div>
+          <AnimatedSection animation="scale-in" delay={100}>
+            <div className="p-6 bg-gradient-to-br from-zinc-900 to-zinc-800 border border-zinc-700 rounded-xl text-center glow-hover-area hover:border-primary-500/50 hover:glow transition-all duration-300">
+              <div className="text-3xl font-bold text-gradient mb-2">6,833+</div>
+              <div className="text-sm text-zinc-400">Net Lines of Code</div>
+            </div>
+          </AnimatedSection>
+          <AnimatedSection animation="scale-in" delay={200}>
+            <div className="p-6 bg-gradient-to-br from-zinc-900 to-zinc-800 border border-zinc-700 rounded-xl text-center glow-hover-area hover:border-primary-500/50 hover:glow transition-all duration-300">
+              <div className="text-3xl font-bold text-gradient mb-2">105+</div>
+              <div className="text-sm text-zinc-400">Files Changed</div>
+            </div>
+          </AnimatedSection>
+          <AnimatedSection animation="scale-in" delay={300}>
+            <div className="p-6 bg-gradient-to-br from-zinc-900 to-zinc-800 border border-zinc-700 rounded-xl text-center glow-hover-area hover:border-primary-500/50 hover:glow transition-all duration-300">
+              <div className="text-3xl font-bold text-gradient mb-2">7+</div>
+              <div className="text-sm text-zinc-400">Major Features</div>
+            </div>
+          </AnimatedSection>
+          <AnimatedSection animation="scale-in" delay={400}>
+            <div className="p-6 bg-gradient-to-br from-zinc-900 to-zinc-800 border border-zinc-700 rounded-xl text-center glow-hover-area hover:border-primary-500/50 hover:glow transition-all duration-300">
+              <div className="text-3xl font-bold text-gradient mb-2">8+</div>
+              <div className="text-sm text-zinc-400">Security Features</div>
+            </div>
+          </AnimatedSection>
         </div>
       </div>
     </section>
