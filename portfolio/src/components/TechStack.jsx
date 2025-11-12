@@ -1,4 +1,5 @@
 import React from 'react';
+import AnimatedSection from './AnimatedSection';
 
 const TechStack = () => {
   const technologies = {
@@ -23,6 +24,8 @@ const TechStack = () => {
     ],
     'Database': [
       { name: 'PostgreSQL', icon: '🐘', color: 'from-blue-600 to-indigo-700' },
+      { name: 'NeonDB', icon: '⚡', color: 'from-cyan-500 to-blue-600' },
+      { name: 'Railway', icon: '🚂', color: 'from-purple-600 to-pink-600' },
       { name: 'MySQL', icon: '🐬', color: 'from-blue-500 to-cyan-600' },
       { name: 'Flyway', icon: '🦅', color: 'from-red-500 to-orange-600' },
     ],
@@ -38,7 +41,7 @@ const TechStack = () => {
   return (
     <section id="tech" className="py-24 px-6 lg:px-8 bg-zinc-900">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <AnimatedSection animation="fade-in-down" className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Tech <span className="text-gradient">Stack</span>
           </h2>
@@ -46,14 +49,14 @@ const TechStack = () => {
           <p className="text-zinc-400 text-lg max-w-2xl mx-auto">
             Technologies and tools I use to bring ideas to life
           </p>
-        </div>
+        </AnimatedSection>
 
         <div className="grid gap-8">
           {Object.entries(technologies).map(([category, techs], categoryIndex) => (
-            <div
+            <AnimatedSection
               key={category}
-              className="animate-slide-up"
-              style={{ animationDelay: `${categoryIndex * 0.1}s` }}
+              animation="fade-in-up"
+              delay={categoryIndex * 100}
             >
               <h3 className="text-2xl font-bold mb-6 text-zinc-200 flex items-center gap-3">
                 <span className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center text-white text-sm">
@@ -65,8 +68,7 @@ const TechStack = () => {
                 {techs.map((tech, index) => (
                   <div
                     key={tech.name}
-                    className="group relative p-6 bg-zinc-800 border border-zinc-700 rounded-xl hover:border-primary-500/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-primary-500/10"
-                    style={{ animationDelay: `${(categoryIndex * 0.1) + (index * 0.05)}s` }}
+                    className="group relative p-6 bg-zinc-800 border border-zinc-700 rounded-xl hover:border-primary-500/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-primary-500/10 glow-hover-area hover:glow"
                   >
                     <div className="text-center">
                       <div className="text-4xl mb-3 animate-float">{tech.icon}</div>
@@ -79,13 +81,14 @@ const TechStack = () => {
                   </div>
                 ))}
               </div>
-            </div>
+            </AnimatedSection>
           ))}
         </div>
 
         {/* Architecture Patterns */}
-        <div className="mt-16 p-8 bg-gradient-to-br from-zinc-900 to-zinc-800 border border-zinc-700 rounded-2xl">
-          <h3 className="text-2xl font-bold mb-6 text-zinc-100">Architecture & Patterns</h3>
+        <AnimatedSection animation="scale-in" delay={500}>
+          <div className="mt-16 p-8 bg-gradient-to-br from-zinc-900 to-zinc-800 border border-zinc-700 rounded-2xl glow-hover-area hover:border-primary-500/50 hover:glow-strong transition-all duration-300">
+            <h3 className="text-2xl font-bold mb-6 text-zinc-100">Architecture & Patterns</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
               'Event-Driven Architecture',
@@ -108,7 +111,8 @@ const TechStack = () => {
               </div>
             ))}
           </div>
-        </div>
+          </div>
+        </AnimatedSection>
       </div>
     </section>
   );
