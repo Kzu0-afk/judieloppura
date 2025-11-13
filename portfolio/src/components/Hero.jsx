@@ -26,13 +26,13 @@ const Hero = () => {
       {/* Dynamic gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-zinc-950 via-zinc-900 to-zinc-950">
         <div 
-          className="absolute inset-0 bg-[radial-gradient(circle_at_var(--mouse-x)_var(--mouse-y),_var(--tw-gradient-stops))] from-primary-900/30 via-transparent to-transparent transition-all duration-300"
+          className="absolute inset-0 bg-[radial-gradient(circle_at_var(--mouse-x)_var(--mouse-y),_var(--tw-gradient-stops))] from-primary-600/20 via-transparent to-transparent transition-all duration-300"
           style={{
             '--mouse-x': `${mousePosition.x}px`,
             '--mouse-y': `${mousePosition.y}px`,
           }}
         ></div>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-purple-900/10 via-transparent to-transparent"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-accent-600/10 via-transparent to-transparent"></div>
       </div>
 
       {/* Animated grid pattern */}
@@ -40,7 +40,7 @@ const Hero = () => {
 
       {/* Floating orbs */}
       <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary-500/10 rounded-full blur-3xl animate-float"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-float-delayed"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent-500/10 rounded-full blur-3xl animate-float-delayed"></div>
 
       <div className="relative max-w-7xl mx-auto text-center">
         <div className="mb-6 animate-fade-in-down">
@@ -53,7 +53,7 @@ const Hero = () => {
           <span className="block text-zinc-100">
             <span className="text-gradient inline-block hover:scale-105 transition-transform cursor-default">Judiel Oppura</span>
             <span className="text-zinc-500 mx-4">//</span>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-primary-600">Kazu00</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-accent-600">Kazu00</span>
           </span>
         </h1>
 
@@ -68,7 +68,7 @@ const Hero = () => {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-fade-in-up animation-delay-400">
           <button
             onClick={() => scrollToSection('contributions')}
-            className="group relative px-8 py-4 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-primary-500/50 flex items-center gap-2 overflow-hidden"
+            className="group relative px-8 py-4 bg-gradient-to-r from-primary-600 to-accent-600 hover:from-primary-700 hover:to-accent-700 text-white rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-primary-500/50 flex items-center gap-2 overflow-hidden"
           >
             <span className="relative z-10">View My Work</span>
             <svg
@@ -79,7 +79,7 @@ const Hero = () => {
             >
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-accent-600 to-primary-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </button>
           <button
             onClick={() => scrollToSection('contact')}
