@@ -13,7 +13,7 @@ const Contributions = () => {
       role: 'Full-Stack Developer',
       description: 'Full-stack features built for an educational technology platform, including gamification systems, calendar management, real-time messaging, and marketing automation.',
       technologies: ['Java', 'Spring Boot', 'React', 'PostgreSQL', 'WebSocket', 'JWT'],
-      gradient: 'from-purple-600 via-blue-600 to-cyan-500',
+      gradient: 'from-primary-600 via-primary-500 to-accent-600',
       icon: '🎓',
       metrics: {
         features: '7+ Major Systems',
@@ -39,7 +39,7 @@ const Contributions = () => {
       role: 'Full-Stack Developer',
       description: 'Web-based financial ledger application for tracking personal transactions with modern UI and comprehensive reporting features.',
       technologies: ['Python', 'Django', 'Tailwind CSS', 'PostgreSQL', 'Chart.js'],
-      gradient: 'from-emerald-500 via-teal-500 to-cyan-600',
+      gradient: 'from-accent-600 via-accent-500 to-primary-600',
       icon: '💰',
       metrics: {
         features: 'Financial Tracking',
@@ -64,7 +64,7 @@ const Contributions = () => {
       role: 'Full-Stack Developer',
       description: 'Marketplace platform connecting farmers directly with consumers, featuring product listings, order management, and secure transactions.',
       technologies: ['Django', 'Python', 'HTML5', 'NeonDB', 'Railway', 'Stripe'],
-      gradient: 'from-green-600 via-lime-500 to-yellow-500',
+      gradient: 'from-primary-700 via-primary-600 to-accent-700',
       icon: '🌾',
       metrics: {
         features: 'E-Commerce Platform',
@@ -90,7 +90,7 @@ const Contributions = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Project <span className="text-gradient">Contributions</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary-400 to-primary-600 mx-auto rounded-full mb-4"></div>
+          <div className="w-20 h-1 bg-gradient-to-r from-primary-500 via-accent-500 to-accent-600 mx-auto rounded-full mb-4"></div>
           <p className="text-zinc-400 text-lg max-w-2xl mx-auto">
             Highlighting key contributions across professional and personal projects
           </p>

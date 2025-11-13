@@ -51,7 +51,7 @@ const TechStack = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Tech <span className="text-gradient">Stack</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary-400 via-primary-500 to-primary-600 mx-auto rounded-full mb-4"></div>
+          <div className="w-20 h-1 bg-gradient-to-r from-primary-500 via-accent-500 to-accent-600 mx-auto rounded-full mb-4"></div>
           <p className="text-zinc-400 text-lg max-w-2xl mx-auto">
             Technologies and tools I use to bring ideas to life
           </p>
@@ -66,7 +66,7 @@ const TechStack = () => {
                 onClick={() => setActiveCategory(category)}
                 className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
                   activeCategory === category
-                    ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white shadow-lg shadow-primary-500/30'
+                    ? 'bg-gradient-to-r from-primary-600 to-accent-600 text-white shadow-lg shadow-primary-500/30'
                     : 'bg-zinc-800/80 text-zinc-400 hover:bg-zinc-800 hover:text-zinc-300 border border-zinc-700'
                 }`}
               >
@@ -94,11 +94,11 @@ const TechStack = () => {
                     <div className="flex items-center gap-2">
                       <div className="flex-1 h-2 bg-zinc-700 rounded-full overflow-hidden">
                         <div
-                          className="h-full bg-gradient-to-r from-primary-500 to-primary-600 rounded-full transition-all duration-1000 ease-out"
+                          className="h-full bg-gradient-to-r from-primary-600 to-accent-600 rounded-full transition-all duration-1000 ease-out"
                           style={{ width: `${tech.level}%` }}
                         ></div>
                       </div>
-                      <span className="text-sm font-semibold text-primary-400 min-w-[3rem] text-right">
+                      <span className="text-sm font-semibold text-accent-400 min-w-[3rem] text-right">
                         {tech.level}%
                       </span>
                     </div>
