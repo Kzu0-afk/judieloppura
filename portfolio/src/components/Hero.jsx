@@ -44,26 +44,25 @@ const Hero = () => {
 
       <div className="relative max-w-7xl mx-auto text-center">
         <div className="mb-6 animate-fade-in-down">
-          <span className="inline-block px-5 py-2 bg-gradient-to-r from-primary-500/20 to-purple-500/20 border border-primary-500/30 rounded-full text-primary-300 text-sm font-semibold mb-4 backdrop-blur-sm">
-            ✨ Full-Stack Developer & Creative Problem Solver
+          <span className="inline-block px-5 py-2 bg-primary-500/10 border border-primary-500/20 rounded-full text-primary-400 text-sm font-semibold mb-4 backdrop-blur-sm">
+            Full-Stack Developer
           </span>
         </div>
 
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight animate-fade-in-up">
-          <span className="block text-zinc-100 mb-2">
-            Hi, I'm <span className="text-gradient inline-block hover:scale-105 transition-transform cursor-default">Judiel Oppura</span>
-          </span>
-          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary-400 via-purple-400 to-pink-400 animate-gradient-x mt-2">
-            Kazu00 です！
+          <span className="block text-zinc-100">
+            <span className="text-gradient inline-block hover:scale-105 transition-transform cursor-default">Judiel Oppura</span>
+            <span className="text-zinc-500 mx-4">//</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-primary-600">Kazu00</span>
           </span>
         </h1>
 
         <p className="text-xl md:text-2xl text-zinc-400 max-w-3xl mx-auto mb-12 leading-relaxed animate-fade-in-up animation-delay-200">
-          Fourth-year <span className="text-primary-400 font-semibold">Information Technology</span> undergraduate crafting elegant solutions through 
-          <span className="text-primary-400 font-semibold"> Full-Stack Development</span>. 
-          Passionate about building <span className="text-purple-400 font-semibold">scalable</span>, 
-          <span className="text-pink-400 font-semibold"> secure</span>, and 
-          <span className="text-cyan-400 font-semibold"> user-centric</span> web applications.
+          Fourth-year <span className="text-primary-500 font-semibold">Information Technology</span> undergraduate crafting elegant solutions through 
+          <span className="text-primary-500 font-semibold"> Full-Stack Development</span>. 
+          Passionate about building <span className="text-primary-600 font-semibold">scalable</span>, 
+          <span className="text-primary-600 font-semibold"> secure</span>, and 
+          <span className="text-primary-600 font-semibold"> user-centric</span> web applications.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-fade-in-up animation-delay-400">
@@ -93,17 +92,17 @@ const Hero = () => {
         {/* Tech stack showcase */}
         <div className="flex flex-wrap items-center justify-center gap-3 text-sm animate-fade-in-up animation-delay-600">
           {[
-            { name: 'Java', color: 'border-orange-500/30 hover:border-orange-500 hover:text-orange-400' },
-            { name: 'React', color: 'border-cyan-500/30 hover:border-cyan-500 hover:text-cyan-400' },
-            { name: 'Spring Boot', color: 'border-green-500/30 hover:border-green-500 hover:text-green-400' },
-            { name: 'Python', color: 'border-blue-500/30 hover:border-blue-500 hover:text-blue-400' },
-            { name: 'Django', color: 'border-emerald-500/30 hover:border-emerald-500 hover:text-emerald-400' },
-            { name: 'Tailwind CSS', color: 'border-teal-500/30 hover:border-teal-500 hover:text-teal-400' },
-            { name: 'PostgreSQL', color: 'border-indigo-500/30 hover:border-indigo-500 hover:text-indigo-400' },
+            { name: 'Java', color: 'border-zinc-700 hover:border-primary-600 hover:text-primary-400' },
+            { name: 'React', color: 'border-zinc-700 hover:border-primary-600 hover:text-primary-400' },
+            { name: 'Spring Boot', color: 'border-zinc-700 hover:border-primary-600 hover:text-primary-400' },
+            { name: 'Python', color: 'border-zinc-700 hover:border-primary-600 hover:text-primary-400' },
+            { name: 'Django', color: 'border-zinc-700 hover:border-primary-600 hover:text-primary-400' },
+            { name: 'Tailwind CSS', color: 'border-zinc-700 hover:border-primary-600 hover:text-primary-400' },
+            { name: 'PostgreSQL', color: 'border-zinc-700 hover:border-primary-600 hover:text-primary-400' },
           ].map((tech) => (
             <span
               key={tech.name}
-              className={`px-4 py-2 bg-zinc-800/50 backdrop-blur-sm border-2 ${tech.color} rounded-xl text-zinc-300 transition-all duration-300 hover:scale-110 hover:shadow-lg cursor-default`}
+              className={`px-4 py-2 bg-zinc-900/80 backdrop-blur-sm border ${tech.color} rounded-lg text-zinc-300 transition-all duration-300 hover:scale-105 hover:bg-zinc-800/80 cursor-default`}
             >
               {tech.name}
             </span>

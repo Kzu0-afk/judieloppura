@@ -1,95 +1,127 @@
-import React from 'react';
+import React, { useState } from 'react';
 import AnimatedSection from './AnimatedSection';
 
 const TechStack = () => {
+  const [activeCategory, setActiveCategory] = useState('Languages');
+
   const technologies = {
     'Languages': [
-      { name: 'Java', icon: '☕', color: 'from-orange-500 to-red-600' },
-      { name: 'Python', icon: '🐍', color: 'from-blue-500 to-yellow-500' },
-      { name: 'JavaScript', icon: '⚡', color: 'from-yellow-400 to-yellow-600' },
-      { name: 'TypeScript', icon: '📘', color: 'from-blue-500 to-blue-700' },
-      { name: 'SQL', icon: '🗄️', color: 'from-cyan-500 to-blue-600' },
+      { name: 'Java', icon: '☕', level: 90 },
+      { name: 'Python', icon: '🐍', level: 85 },
+      { name: 'JavaScript', icon: '⚡', level: 88 },
+      { name: 'TypeScript', icon: '📘', level: 75 },
+      { name: 'SQL', icon: '🗄️', level: 80 },
     ],
     'Frontend': [
-      { name: 'React', icon: '⚛️', color: 'from-cyan-400 to-blue-500' },
-      { name: 'Tailwind CSS', icon: '🎨', color: 'from-sky-400 to-cyan-500' },
-      { name: 'HTML5', icon: '🌐', color: 'from-orange-500 to-red-500' },
-      { name: 'CSS3', icon: '🎭', color: 'from-blue-500 to-purple-500' },
+      { name: 'React', icon: '⚛️', level: 88 },
+      { name: 'Tailwind CSS', icon: '🎨', level: 92 },
+      { name: 'HTML5', icon: '🌐', level: 95 },
+      { name: 'CSS3', icon: '🎭', level: 90 },
     ],
     'Backend': [
-      { name: 'Spring Boot', icon: '🍃', color: 'from-green-500 to-emerald-600' },
-      { name: 'Django', icon: '🎸', color: 'from-green-600 to-teal-700' },
-      { name: 'Node.js', icon: '📦', color: 'from-green-500 to-lime-600' },
-      { name: 'REST APIs', icon: '🔌', color: 'from-purple-500 to-pink-600' },
+      { name: 'Spring Boot', icon: '🍃', level: 85 },
+      { name: 'Django', icon: '🎸', level: 82 },
+      { name: 'Node.js', icon: '📦', level: 75 },
+      { name: 'REST APIs', icon: '🔌', level: 90 },
     ],
     'Database': [
-      { name: 'PostgreSQL', icon: '🐘', color: 'from-blue-600 to-indigo-700' },
-      { name: 'NeonDB', icon: '⚡', color: 'from-cyan-500 to-blue-600' },
-      { name: 'Railway', icon: '🚂', color: 'from-purple-600 to-pink-600' },
-      { name: 'MySQL', icon: '🐬', color: 'from-blue-500 to-cyan-600' },
-      { name: 'Flyway', icon: '🦅', color: 'from-red-500 to-orange-600' },
+      { name: 'PostgreSQL', icon: '🐘', level: 88 },
+      { name: 'NeonDB', icon: '⚡', level: 80 },
+      { name: 'Railway', icon: '🚂', level: 78 },
+      { name: 'MySQL', icon: '🐬', level: 82 },
+      { name: 'Flyway', icon: '🦅', level: 75 },
     ],
     'Tools & DevOps': [
-      { name: 'Git', icon: '📚', color: 'from-orange-500 to-red-600' },
-      { name: 'GitHub', icon: '🐙', color: 'from-gray-600 to-gray-800' },
-      { name: 'Vercel', icon: '▲', color: 'from-black to-gray-800' },
-      { name: 'IntelliJ IDEA', icon: '💡', color: 'from-pink-500 to-purple-600' },
-      { name: 'VS Code', icon: '📝', color: 'from-blue-500 to-cyan-500' },
+      { name: 'Git', icon: '📚', level: 90 },
+      { name: 'GitHub', icon: '🐙', level: 92 },
+      { name: 'Vercel', icon: '▲', level: 85 },
+      { name: 'IntelliJ IDEA', icon: '💡', level: 88 },
+      { name: 'VS Code', icon: '📝', level: 90 },
     ],
   };
 
   return (
-    <section id="tech" className="py-24 px-6 lg:px-8 bg-zinc-900">
-      <div className="max-w-7xl mx-auto">
+    <section id="tech" className="py-24 px-6 lg:px-8 bg-zinc-900 relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute top-1/4 left-0 w-96 h-96 bg-primary-500/5 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-primary-500/5 rounded-full blur-3xl"></div>
+
+      <div className="max-w-7xl mx-auto relative z-10">
         <AnimatedSection animation="fade-in-down" className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Tech <span className="text-gradient">Stack</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary-400 to-primary-600 mx-auto rounded-full mb-4"></div>
+          <div className="w-20 h-1 bg-gradient-to-r from-primary-400 via-primary-500 to-primary-600 mx-auto rounded-full mb-4"></div>
           <p className="text-zinc-400 text-lg max-w-2xl mx-auto">
             Technologies and tools I use to bring ideas to life
           </p>
         </AnimatedSection>
 
-        <div className="grid gap-8">
-          {Object.entries(technologies).map(([category, techs], categoryIndex) => (
-            <AnimatedSection
-              key={category}
-              animation="fade-in-up"
-              delay={categoryIndex * 100}
-            >
-              <h3 className="text-2xl font-bold mb-6 text-zinc-200 flex items-center gap-3">
-                <span className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center text-white text-sm">
-                  {categoryIndex + 1}
-                </span>
+        {/* Category Tabs */}
+        <AnimatedSection animation="fade-in-up" delay={100}>
+          <div className="flex flex-wrap justify-center gap-3 mb-12">
+            {Object.keys(technologies).map((category, index) => (
+              <button
+                key={category}
+                onClick={() => setActiveCategory(category)}
+                className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
+                  activeCategory === category
+                    ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white shadow-lg shadow-primary-500/30'
+                    : 'bg-zinc-800/80 text-zinc-400 hover:bg-zinc-800 hover:text-zinc-300 border border-zinc-700'
+                }`}
+              >
                 {category}
-              </h3>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-                {techs.map((tech, index) => (
-                  <div
-                    key={tech.name}
-                    className="group relative p-6 bg-zinc-800 border border-zinc-700 rounded-xl hover:border-primary-500/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-primary-500/10 glow-hover-area hover:glow"
-                  >
-                    <div className="text-center">
-                      <div className="text-4xl mb-3 animate-float">{tech.icon}</div>
-                      <div className="text-sm font-medium text-zinc-300 group-hover:text-zinc-100 transition-colors">
-                        {tech.name}
-                      </div>
-                    </div>
-                    {/* Gradient glow effect */}
-                    <div className={`absolute inset-0 rounded-xl bg-gradient-to-r ${tech.color} opacity-0 group-hover:opacity-10 transition-opacity blur-xl`}></div>
+              </button>
+            ))}
+          </div>
+        </AnimatedSection>
+
+        {/* Tech Cards with Progress Bars */}
+        <AnimatedSection animation="scale-in" delay={200}>
+          <div className="grid md:grid-cols-2 gap-6">
+            {technologies[activeCategory].map((tech, index) => (
+              <div
+                key={tech.name}
+                className="group relative bg-zinc-800/50 backdrop-blur-sm border border-zinc-700 rounded-2xl p-6 hover:border-primary-500/50 transition-all duration-500 hover:scale-[1.02] hover:shadow-xl hover:shadow-primary-500/10"
+                style={{ animationDelay: `${index * 50}ms` }}
+              >
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="text-5xl transform group-hover:scale-110 transition-transform duration-300">
+                    {tech.icon}
                   </div>
-                ))}
+                  <div className="flex-1">
+                    <h4 className="text-xl font-bold text-zinc-100 mb-1">{tech.name}</h4>
+                    <div className="flex items-center gap-2">
+                      <div className="flex-1 h-2 bg-zinc-700 rounded-full overflow-hidden">
+                        <div
+                          className="h-full bg-gradient-to-r from-primary-500 to-primary-600 rounded-full transition-all duration-1000 ease-out"
+                          style={{ width: `${tech.level}%` }}
+                        ></div>
+                      </div>
+                      <span className="text-sm font-semibold text-primary-400 min-w-[3rem] text-right">
+                        {tech.level}%
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Decorative corner accent */}
+                <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-primary-500/10 to-transparent rounded-bl-3xl rounded-tr-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
-            </AnimatedSection>
-          ))}
-        </div>
+            ))}
+          </div>
+        </AnimatedSection>
 
         {/* Architecture Patterns */}
-        <AnimatedSection animation="scale-in" delay={500}>
-          <div className="mt-16 p-8 bg-gradient-to-br from-zinc-900 to-zinc-800 border border-zinc-700 rounded-2xl glow-hover-area hover:border-primary-500/50 hover:glow-strong transition-all duration-300">
-            <h3 className="text-2xl font-bold mb-6 text-zinc-100">Architecture & Patterns</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <AnimatedSection animation="fade-in-up" delay={400}>
+          <div className="mt-16 p-8 bg-zinc-800/30 backdrop-blur-sm border border-zinc-700 rounded-3xl hover:border-primary-500/30 transition-all duration-500">
+            <h3 className="text-2xl font-bold mb-6 text-zinc-100 flex items-center gap-3">
+              <svg className="w-7 h-7 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+              </svg>
+              Architecture & Design Patterns
+            </h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-3">
             {[
               'Event-Driven Architecture',
               'Service Layer Pattern',
@@ -99,15 +131,13 @@ const TechStack = () => {
               'Observer Pattern',
               'Optimistic UI',
               'RESTful Design',
-            ].map((pattern) => (
+            ].map((pattern, index) => (
               <div
                 key={pattern}
-                className="flex items-center gap-3 p-4 bg-zinc-800/50 rounded-lg border border-zinc-700 hover:border-primary-500/50 transition-colors"
+                className="flex items-center gap-2.5 p-4 bg-zinc-800/50 rounded-xl border border-zinc-700 hover:border-primary-500/50 hover:bg-zinc-800 transition-all duration-300 group"
               >
-                <svg className="w-5 h-5 text-primary-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                <span className="text-sm text-zinc-300">{pattern}</span>
+                <div className="w-1.5 h-1.5 rounded-full bg-primary-500 group-hover:scale-150 transition-transform"></div>
+                <span className="text-sm text-zinc-300 group-hover:text-zinc-100 transition-colors">{pattern}</span>
               </div>
             ))}
           </div>
