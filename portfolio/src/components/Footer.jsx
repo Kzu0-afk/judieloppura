@@ -11,7 +11,7 @@ const Footer = () => {
           <div>
             <h3 className="text-2xl font-bold text-gradient mb-4">Judiel Oppura</h3>
             <p className="text-zinc-400 leading-relaxed">
-              Full-Stack Developer building scalable web applications with modern technologies.
+              Engineering secure, scalable digital solutions with modern full-stack technologies.
             </p>
           </div>
 
