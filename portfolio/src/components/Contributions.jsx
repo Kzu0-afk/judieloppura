@@ -8,7 +8,7 @@ const Contributions = () => {
     {
       id: 1,
       project: 'StudyBoost Platform',
-      period: 'Aug–Nov 2025',
+      period: 'February 2025 - Present',
       type: 'Professional Work',
       role: 'Full-Stack Developer',
       description: 'Full-stack features built for an educational technology platform, including gamification systems, calendar management, real-time messaging, and marketing automation.',
