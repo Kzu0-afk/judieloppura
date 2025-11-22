@@ -34,7 +34,7 @@ const Contributions = () => {
     {
       id: 2,
       project: 'ledgerly-web',
-      period: 'Ongoing Development',
+      period: 'September 2025 - October 2025 (Finished)',
       type: 'Personal Project',
       role: 'Full-Stack Developer',
       description: 'Web-based financial ledger application for tracking personal transactions with modern UI and comprehensive reporting features.',
@@ -43,7 +43,7 @@ const Contributions = () => {
       icon: '💰',
       metrics: {
         features: 'Financial Tracking',
-        code: 'Active Development',
+        code: 'Completed Project',
         files: 'Django Full-Stack',
         impact: 'Personal Finance Management'
       },
