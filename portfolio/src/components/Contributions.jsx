@@ -11,7 +11,7 @@ const Contributions = () => {
       period: 'February 2025 - Present (Ongoing Development)',
       type: 'Professional Work',
       role: 'Full-Stack Developer',
-      description: 'Full-stack features built for an educational technology platform, including gamification systems, calendar management, real-time messaging, and marketing automation.',
+      description: 'Full-stack features built for an educational technology platform, including course creation & tutor programs, document uploads & viewer, standardized testing, SEO optimization, ads implementation, gamification systems, calendar management, real-time messaging, and marketing automation.',
       technologies: ['Java', 'Spring Boot', 'React', 'PostgreSQL', 'WebSocket', 'JWT'],
       gradient: 'from-primary-600 via-primary-500 to-accent-600',
       icon: '🎓',
@@ -22,6 +22,11 @@ const Contributions = () => {
         impact: 'High User Engagement'
       },
       keyContributions: [
+        'Course Creation & Tutor Programs with comprehensive course creation ecosystem',
+        'Document Uploads & Viewer as core platform functionality',
+        'Standardized Testing system with quiz management and evaluation',
+        'SEO Optimization for improved search engine visibility',
+        'Ads Implementation for monetization and revenue generation',
         'Gamification & Badges System with JSON-driven evaluation engine',
         'Calendar System with timezone support & document attachments',
         'Real-Time Messaging & Collaboration Platform',
