@@ -8,7 +8,7 @@ const Contributions = () => {
     {
       id: 1,
       project: 'StudyBoost Platform',
-      period: 'February 2025 - Present',
+      period: 'February 2025 - Present (Ongoing Development)',
       type: 'Professional Work',
       role: 'Full-Stack Developer',
       description: 'Full-stack features built for an educational technology platform, including gamification systems, calendar management, real-time messaging, and marketing automation.',
@@ -59,7 +59,7 @@ const Contributions = () => {
     {
       id: 3,
       project: 'farmIT-main',
-      period: 'Ongoing Development',
+      period: 'November 2025 - Present (Ongoing Development)',
       type: 'Personal Project',
       role: 'Full-Stack Developer',
       description: 'Marketplace platform connecting farmers directly with consumers, featuring product listings, order management, and secure transactions.',
