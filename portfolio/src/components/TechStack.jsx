@@ -6,37 +6,39 @@ const TechStack = () => {
 
   const technologies = {
     Languages: [
-      { name: "Java", icon: "☕", level: 90 },
-      { name: "Python", icon: "🐍", level: 85 },
-      { name: "JavaScript", icon: "⚡", level: 88 },
-      { name: "TypeScript", icon: "📘", level: 75 },
-      { name: "SQL", icon: "🗄️", level: 80 },
+      { name: "Java", level: 90 },
+      { name: "Python", level: 85 },
+      { name: "JavaScript", level: 88 },
+      { name: "TypeScript", level: 75 },
+      { name: "SQL", level: 80 },
     ],
     Frontend: [
-      { name: "React", icon: "⚛️", level: 88 },
-      { name: "Tailwind CSS", icon: "🎨", level: 92 },
-      { name: "HTML5", icon: "🌐", level: 95 },
-      { name: "CSS3", icon: "🎭", level: 90 },
+      { name: "Next.js", level: 82 },
+      { name: "React", level: 88 },
+      { name: "Tailwind CSS", level: 92 },
+      { name: "HTML5", level: 95 },
+      { name: "CSS3", level: 90 },
     ],
     Backend: [
-      { name: "Spring Boot", icon: "🍃", level: 85 },
-      { name: "Django", icon: "🎸", level: 82 },
-      { name: "Node.js", icon: "📦", level: 75 },
-      { name: "REST APIs", icon: "🔌", level: 90 },
+      { name: "NestJS", level: 80 },
+      { name: "Spring Boot", level: 85 },
+      { name: "Django", level: 82 },
+      { name: "Node.js", level: 75 },
+      { name: "REST APIs", level: 90 },
     ],
     Database: [
-      { name: "PostgreSQL", icon: "🐘", level: 88 },
-      { name: "NeonDB", icon: "⚡", level: 80 },
-      { name: "Railway", icon: "🚂", level: 78 },
-      { name: "MySQL", icon: "🐬", level: 82 },
-      { name: "Flyway", icon: "🦅", level: 75 },
+      { name: "PostgreSQL", level: 88 },
+      { name: "NeonDB", level: 80 },
+      { name: "Railway", level: 78 },
+      { name: "MySQL", level: 82 },
+      { name: "Flyway", level: 75 },
     ],
     "Tools & DevOps": [
-      { name: "Git", icon: "📚", level: 90 },
-      { name: "GitHub", icon: "🐙", level: 92 },
-      { name: "Vercel", icon: "▲", level: 85 },
-      { name: "IntelliJ IDEA", icon: "💡", level: 88 },
-      { name: "VS Code", icon: "📝", level: 90 },
+      { name: "Git", level: 90 },
+      { name: "GitHub", level: 92 },
+      { name: "Vercel", level: 85 },
+      { name: "IntelliJ IDEA", level: 88 },
+      { name: "VS Code", level: 90 },
     ],
   };
 
@@ -83,7 +85,6 @@ const TechStack = () => {
                 style={{ animationDelay: `${index * 50}ms` }}
               >
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="text-5xl transform group-hover:scale-110 transition-transform duration-300">{tech.icon}</div>
                   <div className="flex-1">
                     <h4 className="text-xl font-bold text-zinc-100 mb-1">{tech.name}</h4>
                     <div className="flex items-center gap-2">
