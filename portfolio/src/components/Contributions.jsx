@@ -15,7 +15,6 @@ const Contributions = () => {
         "Full-stack features built for an educational technology platform, including course creation & tutor programs, document uploads & viewer, standardized testing, SEO optimization, ads implementation, gamification systems, calendar management, real-time messaging, and marketing automation.",
       technologies: ["Java", "Spring Boot", "React", "PostgreSQL", "WebSocket", "JWT"],
       gradient: "from-primary-600 via-primary-500 to-accent-600",
-      icon: "🎓",
       metrics: {
         features: "7+ Major Systems",
         code: "~6,833 Lines",
@@ -47,7 +46,6 @@ const Contributions = () => {
         "Contributed cross-app improvements to Symph's AI-powered lesson planning platform, shipping teacher onboarding flows, lesson-plan and summative-test updates, feedback/admin tooling, markdown-to-DOCX export fixes, and SEO enhancements across the web, admin, and backend apps.",
       technologies: ["Next.js", "React", "TypeScript", "NestJS", "Nx", "Tailwind CSS"],
       gradient: "from-violet-700 via-primary-600 to-fuchsia-600",
-      icon: "📘",
       metrics: {
         features: "Teacher UX & Planning Tools",
         code: "Web + Admin + Backend",
@@ -73,7 +71,6 @@ const Contributions = () => {
         "Web-based financial ledger application for tracking personal transactions with modern UI and comprehensive reporting features.",
       technologies: ["Python", "Django", "Tailwind CSS", "PostgreSQL", "Chart.js"],
       gradient: "from-accent-600 via-accent-500 to-primary-600",
-      icon: "💰",
       metrics: {
         features: "Financial Tracking",
         code: "Completed Project",
@@ -99,7 +96,6 @@ const Contributions = () => {
         "Marketplace platform connecting farmers directly with consumers, featuring product listings, order management, and secure transactions.",
       technologies: ["Django", "Python", "HTML5", "NeonDB", "Railway", "Stripe"],
       gradient: "from-primary-700 via-primary-600 to-accent-700",
-      icon: "🌾",
       metrics: {
         features: "E-Commerce Platform",
         code: "Active Development",
@@ -143,8 +139,7 @@ const Contributions = () => {
                       <span className="inline-block px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-white text-xs font-semibold mb-3">
                         {project.type}
                       </span>
-                      <h3 className="text-3xl md:text-4xl font-bold text-white mb-2 flex items-center gap-3">
-                        <span className="text-5xl">{project.icon}</span>
+                      <h3 className="text-3xl md:text-4xl font-bold text-white mb-2">
                         {project.project}
                       </h3>
                       <p className="text-white/80 text-sm">
