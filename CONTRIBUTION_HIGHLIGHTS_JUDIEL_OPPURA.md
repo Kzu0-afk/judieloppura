@@ -5,11 +5,57 @@
 
 ## TABLE OF CONTENTS
 1. [Full Contribution Highlights](#full-contribution-highlights)
-2. [Best Contributions (Resume-Ready)](#best-contributions-resume-ready)
+2. [Lesson Planner V2 (Symph Inc.)](#lesson-planner-v2-symph-inc)
+3. [Best Contributions (Resume-Ready)](#best-contributions-resume-ready)
 
 ---
 
 # FULL CONTRIBUTION HIGHLIGHTS
+
+## LESSON PLANNER V2 (Symph Inc.)
+**Period**: January 2026 - April 2026  
+**Role**: Full-Stack Intern Developer  
+**Stack**: Next.js, React, TypeScript, NestJS, Nx, Tailwind CSS
+
+### Contribution Scope
+Contributed cross-app improvements to Symph's AI-powered lesson planning platform across the `web`, `admin`, and `backend-gpt` applications. Work centered on improving teacher onboarding, lesson-planning and assessment workflows, feedback tooling, export reliability, and SEO-facing platform enhancements.
+
+### Key Contributions
+**Teacher Onboarding & Profile UX:**
+- Implemented `OnboardingModalV2` for teacher profile setup and integrated it into the profile provider flow
+- Refactored onboarding into focused step components (`PersonalInfoStep`, `SchoolInfoStep`, `ReviewStep`) for better maintainability
+- Improved select handling by introducing better chip/dropdown-based interactions, tag handling, and unsaved-changes protection
+- Enhanced review step location display and general onboarding consistency across the V2 experience
+
+**Lesson Planning & Workflow Enhancements:**
+- Integrated short quiz creation directly into the lesson plan chat flow
+- Improved lesson plan fields and resource handling, including grade-level support updates such as adding `College`
+- Added unit plan support and IB-region configuration updates for LPV2, including payload and portal management adjustments
+- Introduced initial V2 lesson plan page/loading setup and portal-aware feature routing behavior
+
+**Summative Test & Curriculum Updates:**
+- Added PISA-standard curriculum support to the summative test flow
+- Integrated SOLO and SOLO-PISA frameworks, including defaults, validation logic, prompt-name alignment, and payload handling updates
+- Removed inconsistent regional variants and standardized curriculum behavior for cleaner long-term maintenance
+
+**Feedback, Admin Tooling, and Quality Improvements:**
+- Implemented feedback-response chat viewing across admin and backend layers, including route updates, fallback handling for legacy structures, and response page improvements
+- Added/updated feedback service tests to support the new retrieval flow
+- Delivered multiple UI/UX refinements across guided tours, payment visuals, navigation/title notifications, loaders, and dashboard interactions
+
+**Export, SEO, and Reliability Work:**
+- Fixed markdown output and `.docx` export formatting issues, including numbering behavior and choice parsing
+- Added sitemap generation, `robots.txt` updates, FAQ schema, Open Graph preview assets, and metadata adjustments for SEO improvements
+- Shipped a range of regression fixes and cleanup adjustments across onboarding, results sidebar behavior, formatting, and portal-specific behavior
+
+### Technical Impact
+- Improved onboarding completion flow and teacher profile setup UX
+- Expanded assessment and lesson-planning flexibility for additional curriculum variants and regions
+- Strengthened admin feedback investigation workflows with direct chat retrieval
+- Reduced formatting issues in exported documents used by educators
+- Improved discoverability and presentation of public pages through technical SEO work
+
+---
 
 ## 1. GAMIFICATION & BADGES SYSTEM (November 2025)
 
@@ -367,6 +413,22 @@
 ---
 
 # BEST CONTRIBUTIONS (RESUME-READY)
+
+## LESSON PLANNER V2 (SYMPh Inc.)
+**Role**: Full-Stack Intern Developer | **Technologies**: Next.js, React, TypeScript, NestJS, Nx
+
+**Achievement**: Delivered cross-app product improvements for an AI-powered lesson planning platform, spanning teacher onboarding, lesson-planning workflows, assessment configuration, admin feedback tooling, export fixes, and SEO enhancements.
+
+**Technical Implementation**:
+- Built and refactored a multi-step teacher onboarding experience with better select interactions, review-state improvements, and unsaved-changes protection
+- Extended lesson-planning and assessment capabilities through short quiz integration, unit plan / IB-region support, and SOLO / PISA curriculum configuration updates
+- Implemented admin feedback-response chat retrieval across frontend and backend layers, including legacy fallback handling and supporting service tests
+- Fixed markdown-to-DOCX export formatting issues affecting generated instructional content
+- Added sitemap generation, metadata updates, FAQ schema, and Open Graph asset improvements for stronger SEO and public page presentation
+
+**Impact**: Improved educator workflow reliability, expanded curriculum support, and strengthened both the internal admin experience and public-facing platform quality.
+
+---
 
 ## 1. GAMIFICATION & BADGES SYSTEM
 **Role**: Full-Stack Developer | **Technologies**: Spring Boot, React, PostgreSQL, JSONB

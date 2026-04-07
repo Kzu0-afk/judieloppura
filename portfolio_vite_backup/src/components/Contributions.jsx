@@ -38,6 +38,31 @@ const Contributions = () => {
     },
     {
       id: 2,
+      project: 'Lesson Planner V2 (Symph Inc.)',
+      period: 'January 2026 - April 2026',
+      type: 'Internship Project',
+      role: 'Frontend / Full-Stack Intern Developer',
+      description: 'Contributed cross-app improvements to Symph\'s AI-powered lesson planning platform, shipping teacher onboarding flows, lesson-plan and summative-test updates, feedback/admin tooling, markdown-to-DOCX export fixes, and SEO enhancements across the web, admin, and backend apps.',
+      technologies: ['Next.js', 'React', 'TypeScript', 'NestJS', 'Nx', 'Tailwind CSS'],
+      gradient: 'from-violet-700 via-primary-600 to-fuchsia-600',
+      icon: '📘',
+      metrics: {
+        features: 'Teacher UX & Planning Tools',
+        code: 'Web + Admin + Backend',
+        files: 'Cross-App Contributions',
+        impact: 'Workflow & UX Improvements'
+      },
+      keyContributions: [
+        'Built and refactored the teacher onboarding flow, including a new multi-step onboarding modal, improved select inputs, review step enhancements, and unsaved-changes protection',
+        'Improved lesson planning workflows with short quiz integration, lesson-plan form updates, and unit-plan support/configuration for the IB region in V2',
+        'Extended summative test support by integrating PISA and SOLO-PISA curriculum options, validation logic, and prompt/payload handling updates',
+        'Implemented feedback and admin response tooling, including view-chat functionality, legacy route support, backend endpoint updates, and related service tests',
+        'Fixed markdown output and DOCX export formatting issues, including numbering and choice parsing improvements for generated content',
+        'Added growth-oriented product improvements such as sitemap generation, robots updates, FAQ schema, OG preview assets, and metadata adjustments for SEO',
+      ],
+    },
+    {
+      id: 3,
       project: 'ledgerly-web',
       period: 'September 2025 - October 2025 (Finished)',
       type: 'Personal Project',
@@ -62,7 +87,7 @@ const Contributions = () => {
       ],
     },
     {
-      id: 3,
+      id: 4,
       project: 'farmIT-main',
       period: 'November 2025 - Present (Ongoing Development)',
       type: 'Personal Project',
@@ -97,7 +122,7 @@ const Contributions = () => {
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary-500 via-accent-500 to-accent-600 mx-auto rounded-full mb-4"></div>
           <p className="text-zinc-400 text-lg max-w-2xl mx-auto">
-            Highlighting key contributions across professional and personal projects
+            Highlighting key contributions across professional, internship, and personal projects
           </p>
         </AnimatedSection>
 
